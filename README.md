@@ -11,7 +11,7 @@ It bypasses standard browser â€œnew tabâ€ limitations by supporting **u
 * `?` : Toggle the Help / Shortcuts Legend overlay
 * `Alt + N` : Create a new shortcut
 * `Alt + B` : Open file browser to set a custom background image
-* `Alt + R` : Reset background to `background.png` and recenter
+* `Alt + F1` : Reset background to `background.png` and recenter
 * `Alt + Arrow Keys` : Nudge background image position (2% increments)
 
 ---
