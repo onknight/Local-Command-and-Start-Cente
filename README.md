@@ -6,10 +6,6 @@ It bypasses standard browser â€œnew tabâ€ limitations by supporting **u
 
 ---
 
-## 2. Keyboard Command Registry
-
-The interface is fully operable via keyboard input.
-
 ### 2.1 Global Commands
 
 * `?` : Toggle the Help / Shortcuts Legend overlay
@@ -26,6 +22,7 @@ The interface is fully operable via keyboard input.
 
 * `Alt + E` or `Alt + Enter` : Edit the selected shortcutâ€™s name or URL
 * `Alt + D` : Delete the selected shortcut
+
 
 ---
 
