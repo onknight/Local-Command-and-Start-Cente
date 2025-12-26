@@ -1,53 +1,66 @@
-## 1. Project Scope and Utility
+Based on your progress and the code in Peak.html, here is the updated README.md for Version 1.3.6. This version marks the completion of the Credential Security phase and sets the stage for the transition to a standalone desktop application.
 
-The **Local Command and Start Center** is a privacy-first, high-density dashboard designed to consolidate daily web tools and local network services, including homelab environments.
+Local Command and Start Center (LCSC)
+Version 1.3.6 | The Secure Vault & Data Integrity Update
 
-It bypasses standard browser â€œnew tabâ€ limitations by supporting **unlimited shortcuts** and employing a **Stealth UI model**. All administrative controls are hidden and accessible only via keyboard commands, ensuring a clean interface.
+🎯 Project Definition
+The LCSC is a private, high-density navigation hub. It acts as a "Single Pane of Glass" for managing local homelab services and internal IP addresses without the privacy risks of cloud-based start pages.
 
----
+The Philosophy
+Stealth First: Admin tools and sensitive vault data remain invisible until specifically invoked, maintaining a minimalist aesthetic.
 
-### 2.1 Global Commands
+Local First: All configuration, visual data, and imported vault credentials stay in your browser's localStorage.
 
-* `?` : Toggle the Help / Shortcuts Legend overlay
-* `Alt + N` : Create a new shortcut
-* `Alt + B` : Open file browser to set a custom background image
-* `Alt + F1` : Reset background to `background.png` and recenter
-* `Alt + Arrow Keys` : Nudge background image position (2% increments)
+Zero Friction: A single-file HTML solution that provides enterprise-level dashboarding without a backend.
 
----
+🚀 Key Features
+Integrated Site Vault: A local credential manager that allows you to browse and search imported logins without leaving the dashboard.
 
-### 2.2 Contextual Commands
+Smart CSV Parser: Advanced logic that identifies "Site Name," "Username," and "Password" columns automatically to prevent data mapping errors.
 
-*(While the mouse is hovering over a shortcut)*
+Dynamic HUD (Heads-Up Display): A sliding interface that presents credentials and site names with one-click "Copy to Clipboard" functionality.
 
-* `Alt + E` or `Alt + Enter` : Edit the selected shortcutâ€™s name or URL
-* `Alt + D` : Delete the selected shortcut
+Stealth Management: Shortcut editing and deletion controls are hidden until the Alt key is engaged.
 
+Data Recovery Engine: Full JSON backup and restoration suite to move your entire environment (including wallpaper positions) between devices.
 
----
+⌨️ System Registry (Shortcut Guide)
+Vault Controls
+📂 BROWSE VAULT: Open the searchable credential explorer.
 
-## 3. Core System Logic
+Esc: Instantly close the Vault, HUD, or Help Overlay.
 
-### 3.1 Smart Protocol Detection
+Alt + F2: Vault Purge – Permanently wipes all imported CSV data (added in v1.3.6).
 
-The system automatically handles protocols to ensure correct service resolution:
+Management (Hold Alt)
+Alt + N: Create New Shortcut.
 
-* **Local Network**: URLs with `192.168.*`, `10.*`, `127.*`, or `*.local` are prefixed with `http://`.
+Alt + E: Edit Shortcut (while mouse-hovering).
 
-* **Standard Web**: Domains default to `https://`.
+Alt + D: Delete Shortcut (while mouse-hovering).
 
-* **Manual Override**: User-defined protocols (e.g., `ftp://`) are preserved as entered.
+Visuals & Environment
+Alt + B: Change Wallpaper (Upload Image).
 
----
+Alt + F1: Reset All Visuals & Nudge Data.
 
-### 3.2 Background Persistence Engine
+Alt + Arrow Keys: Nudge Background Position (10px steps) for pixel-perfect alignment.
 
-Background images are stored as Base64 data in the browserâ€™s `localStorage`.
+🗺 Development Roadmap
+✅ Stage 1: Interface & Stealth UI (COMPLETE)
+High-density grid, search integration, and stealth controls.
 
-* **Storage**: Images are encoded and saved, independent of the original file location.
-* **Positioning**: Any adjustments to the background position are saved and retained across sessions.
-* **Reset**: Resetting the background returns the image and positioning to default.
+✅ Stage 2: Credential Security (COMPLETE)
+Local Vault integration, CSV parsing engine, and Secure HUD display.
 
+⏳ Stage 3: Desktop Standalone (PLANNED)
+Electron.js Wrapper: Converting the single-file HTML into a cross-platform desktop app.
+
+System Tray Minimization: Running the Command Center as a persistent background utility.
+
+Global Hotkeys: Invoking the Command Center from anywhere in the OS.
+
+Build v1.3.6 Stable | Developed by Tom | Documentation by Gemini
 ---
 
 ## 4. Development Roadmap
@@ -55,7 +68,7 @@ Background images are stored as Base64 data in the browserâ€™s `localStorag
 | Phase   | Milestone              | Primary Technologies        | Status       |
 | ------- | ---------------------- | --------------------------- | ------------ |
 | Stage 1 | Interface & Stealth UI | HTML5, CSS3, JavaScript     | **Complete** |
-| Stage 2 | Credential Security    | Proton Pass API Integration | Planned      |
+| Stage 2 | Credential Security    | Proton Pass API Integration |**Complete**     |
 | Stage 3 | Desktop Standalone     | Electron.js Framework       | Planned      |
 | Stage 4 | Server Hosting         | Docker, Nginx (Homelab)     | Planned      |
 
